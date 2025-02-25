@@ -7,6 +7,7 @@ jobs:
     steps:
       - run: echo "Isso foi automaticamente disparado pelo GitHub Actions. ${{ github.event_name }}."
       - run: echo "Estamos rodando em um servidor hospedado pelo GitHub. ${{ runner.os }}"
-      # - name: Check out repository code
-      #   uses: actions/checkout@v4
-      # - run: 
+      - name: Check out repository code
+        uses: actions/checkout@v4 # essa parada parece que da tipo um git clone pra maquina 'ubuntu-latest' criada
+      - name: Dar ls
+        run: ls ${{ github.repository }} # isso aqui da um ls no diretorio raiz do repo
