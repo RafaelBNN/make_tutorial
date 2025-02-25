@@ -11,3 +11,12 @@ jobs:
         uses: actions/checkout@v4 # essa parada parece que da tipo um git clone pra maquina 'ubuntu-latest' criada
       - name: Dar ls
         run: ls # isso aqui da um ls no diretorio raiz do repo
+      - name: Rodar make
+        run: make
+      - name: Rodar binário # aqui mais alguns comandos possiveis do yml
+        run: |
+          if [ -x ./hellomake ]; then
+            ./hellomake
+          else
+            echo "O binário 'hellomake' não foi encontrado ou não é executável!" && exit 1
+          fi
