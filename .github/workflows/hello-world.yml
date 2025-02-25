@@ -7,7 +7,6 @@ jobs:
     steps:
       - run: echo "Isso foi automaticamente disparado pelo GitHub Actions. ${{ github.event_name }}."
       - run: echo "Estamos rodando em um servidor hospedado pelo GitHub. ${{ runner.os }}"
-      - run: echo "O nome da branch atual eh: ${{ github.ref }} e o repositorio eh ${{ github.repository }}"
       # - name: Check out repository code
       #   uses: actions/checkout@v4
       # - run: 
